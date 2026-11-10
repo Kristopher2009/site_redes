@@ -18,11 +18,17 @@
     </header>
 
     <main class="conteudo">
-        <section class="abertura">
-            <p class="rotulo">UM GUIA PARA COMEÇAR</p>
-            <h1>Como os dispositivos <strong>se conectam?</strong></h1>
-            <p>Redes permitem que computadores, máquinas e sensores troquem informações. Este guia apresenta as tecnologias mais comuns em empresas e na indústria.</p>
-            <a class="botao" href="#assuntos">Conheça os assuntos ↓</a>
+        <section class="abertura abertura-inicio">
+            <div class="texto-abertura">
+                <p class="rotulo">UM GUIA PARA COMEÇAR</p>
+                <h1>Como os dispositivos <strong>se conectam?</strong></h1>
+                <p>Redes permitem que computadores, máquinas e sensores troquem informações. Conheça os meios e protocolos usados em empresas e na indústria.</p>
+                <a class="botao" href="#assuntos">Conheça os assuntos ↓</a>
+            </div>
+            <figure class="foto-abertura">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Fileiras de servidores em um centro de dados">
+                <figcaption>Infraestrutura de rede em um centro de dados</figcaption>
+            </figure>
         </section>
 
         <section class="secao" id="assuntos">
@@ -31,12 +37,12 @@
             <div class="cartoes">
                 <article class="cartao">
                     <h3>Redes corporativas e locais</h3>
-                    <p>Conectam computadores, servidores e dispositivos móveis em escritórios e prédios.</p>
+                    <p>Conectam computadores, servidores e dispositivos móveis em escritórios e prédios. Priorizam acesso a serviços, compartilhamento de dados e mobilidade.</p>
                     <a href="corporativas.html">Ver Ethernet, Wi-Fi e fibra óptica →</a>
                 </article>
                 <article class="cartao">
                     <h3>Redes e protocolos industriais</h3>
-                    <p>Conectam controladores, sensores e equipamentos usados em processos industriais.</p>
+                    <p>Conectam controladores, sensores e equipamentos de produção. Precisam atender aos requisitos de tempo, disponibilidade e condições do ambiente.</p>
                     <a href="industriais.html">Ver redes e protocolos industriais →</a>
                 </article>
             </div>
@@ -59,6 +65,29 @@
                     <p>Um conjunto de regras que define como os dispositivos enviam e recebem informações.</p>
                 </article>
             </div>
+        </section>
+
+        <section class="secao">
+            <p class="rotulo">O CAMINHO DA INFORMAÇÃO</p>
+            <h2>Como os dados chegam ao destino?</h2>
+            <div class="passos">
+                <article class="passo">
+                    <span>01</span>
+                    <h3>Um dispositivo envia</h3>
+                    <p>Um computador, sensor ou controlador prepara uma informação, como uma mensagem ou uma medição.</p>
+                </article>
+                <article class="passo">
+                    <span>02</span>
+                    <h3>A rede transporta</h3>
+                    <p>O cabo, a fibra ou o rádio leva os dados. Switches e pontos de acesso ajudam a encaminhá-los.</p>
+                </article>
+                <article class="passo">
+                    <span>03</span>
+                    <h3>Outro dispositivo recebe</h3>
+                    <p>As regras do protocolo ajudam os equipamentos a interpretar a informação e responder quando necessário.</p>
+                </article>
+            </div>
+            <p class="texto-apoio">Na prática, redes combinam vários equipamentos e tecnologias. Um escritório pode usar Wi-Fi para os celulares e cabos Ethernet para os computadores; uma fábrica pode conectar sensores a controladores e sistemas de supervisão.</p>
         </section>
     </main>
 

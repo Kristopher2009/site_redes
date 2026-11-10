@@ -73,6 +73,37 @@ nav a[aria-current="page"] {
     padding: 80px 0 64px;
 }
 
+.abertura-inicio {
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    align-items: center;
+    gap: clamp(28px, 6vw, 72px);
+}
+
+.texto-abertura {
+    max-width: 600px;
+}
+
+.foto-abertura {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.foto-abertura img {
+    display: block;
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.foto-abertura figcaption {
+    padding-top: 9px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
 .rotulo {
     margin-bottom: 12px;
     color: var(--green);
@@ -139,6 +170,19 @@ h2 {
     background: var(--surface);
 }
 
+.cartao,
+.item,
+.passo {
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.cartao:hover,
+.item:hover,
+.passo:hover {
+    transform: translateY(-2px);
+    border-color: var(--green);
+}
+
 .cartao h3,
 .item h3,
 .grupo > h3 {
@@ -161,6 +205,69 @@ h2 {
 
 .fundamentos .cartoes {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.passos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.passo {
+    padding: 22px;
+    border-top: 3px solid var(--coral);
+    background: var(--surface);
+}
+
+.passo span {
+    display: block;
+    margin-bottom: 16px;
+    color: var(--green);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.passo h3 {
+    margin-bottom: 8px;
+}
+
+.passo p,
+.texto-apoio {
+    margin-bottom: 0;
+    color: var(--muted);
+}
+
+.texto-apoio {
+    margin-top: 20px;
+}
+
+.fluxo {
+    padding: 24px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+}
+
+.fluxo p:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    color: var(--green-dark);
+}
+
+.fluxo p:first-child strong {
+    padding: 10px 12px;
+    background: var(--lime);
+    font-size: 14px;
+}
+
+.fluxo p:first-child span {
+    color: var(--coral);
+}
+
+.fluxo p:last-child {
+    margin-bottom: 0;
+    color: var(--muted);
 }
 
 .grupo {
@@ -231,13 +338,37 @@ footer p:last-child {
         padding: 54px 0 44px;
     }
 
+    .abertura-inicio {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .foto-abertura img {
+        height: 280px;
+    }
+
     .abertura > p:not(.rotulo) {
         font-size: 16px;
     }
 
     .cartoes,
     .lista,
-    .fundamentos .cartoes {
+    .fundamentos .cartoes,
+    .passos {
         grid-template-columns: 1fr;
+    }
+
+    .fluxo {
+        padding: 16px;
+    }
+
+    .fluxo p:first-child {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .fluxo p:first-child span {
+        transform: rotate(90deg);
     }
 }

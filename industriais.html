@@ -21,7 +21,8 @@
         <section class="abertura">
             <p class="rotulo">REDES E PROTOCOLOS INDUSTRIAIS</p>
             <h1>Comunicação na <strong>automação.</strong></h1>
-            <p>Redes industriais levam informações entre controladores, instrumentos, sensores e sistemas de supervisão. A escolha depende do processo e dos equipamentos.</p>
+            <p>Redes industriais conectam sensores, instrumentos, controladores e sistemas de supervisão. Elas ajudam a acompanhar medições, enviar comandos e coordenar máquinas e processos.</p>
+            <p>Além de transmitir dados, precisam ser planejadas para as condições do local: ruído elétrico, temperatura, vibração, distância, tempo de resposta e disponibilidade exigida.</p>
         </section>
 
         <section class="secao">
@@ -33,19 +34,27 @@
                 <div class="lista">
                     <article class="item">
                         <h3>PROFINET</h3>
-                        <p>Comunicação Ethernet industrial usada entre controladores, entradas e saídas remotas e equipamentos de automação.</p>
+                        <p>Comunicação Ethernet industrial usada entre controladores, módulos de entrada e saída, acionamentos e outros equipamentos.</p>
+                        <p>Permite trocar dados de processo e informações de diagnóstico. Suas opções de comunicação atendem a diferentes necessidades, desde automação geral até aplicações com sincronização mais exigente.</p>
+                        <p class="dado">O desempenho depende dos dispositivos, da configuração da rede e do perfil de comunicação escolhido.</p>
                     </article>
                     <article class="item">
                         <h3>EtherNet/IP</h3>
-                        <p>Protocolo industrial que utiliza Ethernet padrão para trocar dados de controle e informações entre dispositivos.</p>
+                        <p>Usa a família de protocolos CIP sobre Ethernet e IP. É aplicado na comunicação entre controladores, módulos de entrada e saída, sensores e acionamentos.</p>
+                        <p>Mensagens explícitas são úteis para configuração e diagnóstico; dados de entrada e saída podem ser trocados periodicamente para controle.</p>
+                        <p class="dado">A rede pode compartilhar infraestrutura Ethernet padrão, mas deve ser projetada e configurada para os requisitos industriais da aplicação.</p>
                     </article>
                     <article class="item">
                         <h3>EtherCAT</h3>
-                        <p>Rede Ethernet industrial desenvolvida para comunicação rápida e sincronizada entre dispositivos.</p>
+                        <p>EtherCAT foi desenvolvido para comunicação em tempo real em sistemas de automação. É usado, por exemplo, para conectar controladores, módulos de entrada e saída e servodrives.</p>
+                        <p>Os dispositivos podem processar os dados enquanto o quadro percorre a rede. Recursos de sincronização ajudam aplicações que precisam coordenar movimentos.</p>
+                        <p class="dado">Topologia, ciclo de comunicação e precisão dependem dos equipamentos e da configuração.</p>
                     </article>
                     <article class="item">
                         <h3>Foundation Fieldbus HSE</h3>
-                        <p>Usa Ethernet como rede de alta velocidade para conectar controladores e segmentos de instrumentação.</p>
+                        <p>HSE significa High Speed Ethernet. É a parte Ethernet da tecnologia Foundation Fieldbus e pode conectar controladores, estações e segmentos H1.</p>
+                        <p>É utilizada como backbone de comunicação entre equipamentos de automação de processo.</p>
+                        <p class="dado">O projeto precisa considerar compatibilidade entre dispositivos, integração dos segmentos e requisitos de disponibilidade.</p>
                     </article>
                 </div>
             </div>
@@ -55,15 +64,21 @@
                 <div class="lista">
                     <article class="item">
                         <h3>Modbus RTU</h3>
-                        <p>Protocolo serial simples, muito usado para comunicação entre controladores, instrumentos e acionamentos.</p>
+                        <p>Modbus RTU é um protocolo serial usado por controladores, medidores e acionamentos. Os dados são organizados em mensagens com endereço e verificação de erro.</p>
+                        <p>É comum encontrar interfaces RS-485, que permitem conectar vários equipamentos em um barramento, e também equipamentos com outras interfaces seriais.</p>
+                        <p class="dado">É simples de integrar, mas a velocidade, a distância e a quantidade de dispositivos dependem da interface e das condições da instalação.</p>
                     </article>
                     <article class="item">
                         <h3>PROFIBUS DP</h3>
-                        <p>Rede usada para conectar controladores a equipamentos de campo, como módulos de entrada e saída e acionamentos.</p>
+                        <p>PROFIBUS DP conecta controladores a dispositivos periféricos, como módulos de entrada e saída e acionamentos. DP refere-se à comunicação descentralizada de periféricos.</p>
+                        <p>O meio físico elétrico RS-485 é muito usado. Os equipamentos trocam dados cíclicos e também podem fornecer informações de diagnóstico.</p>
+                        <p class="dado">Taxa de comunicação e comprimento do segmento são relacionados: valores maiores de velocidade costumam exigir trechos mais curtos.</p>
                     </article>
                     <article class="item">
                         <h3>DeviceNet</h3>
-                        <p>Rede baseada em CAN que conecta controladores a sensores, atuadores e outros dispositivos industriais.</p>
+                        <p>DeviceNet é uma rede industrial baseada no barramento CAN. Ela conecta controladores a sensores, atuadores, módulos e acionamentos.</p>
+                        <p>O cabo pode transportar comunicação e alimentação para os dispositivos, conforme o projeto e os limites elétricos do segmento.</p>
+                        <p class="dado">Verifique corrente, comprimento, terminações e compatibilidade antes de ampliar ou modificar um segmento.</p>
                     </article>
                 </div>
             </div>
@@ -73,23 +88,33 @@
                 <div class="lista">
                     <article class="item">
                         <h3>PROFIBUS PA</h3>
-                        <p>Conecta instrumentos de processo e pode fornecer comunicação e alimentação pelo mesmo barramento.</p>
+                        <p>PROFIBUS PA é voltado a instrumentos de processo, como transmissores de pressão, temperatura e vazão.</p>
+                        <p>A comunicação e a alimentação podem compartilhar o barramento. Isso reduz cabeamento, mas exige planejamento correto da fonte e dos segmentos.</p>
+                        <p class="dado">Instalações em áreas classificadas exigem equipamentos, barreiras e práticas apropriados à classificação do local.</p>
                     </article>
                     <article class="item">
                         <h3>HART</h3>
-                        <p>Acrescenta comunicação digital ao sinal analógico usado por instrumentos de campo.</p>
+                        <p>HART permite comunicação digital sobreposta ao sinal analógico de 4–20 mA usado por muitos instrumentos.</p>
+                        <p>O sinal analógico continua representando a variável medida, enquanto a comunicação digital pode levar configuração, identificação e diagnóstico do instrumento.</p>
+                        <p class="dado">A qualidade da comunicação depende do instrumento, da carga e das características elétricas do circuito.</p>
                     </article>
                     <article class="item">
                         <h3>Foundation Fieldbus H1</h3>
-                        <p>Rede de comunicação para instrumentos de processo, com possibilidade de alimentação pelo barramento.</p>
+                        <p>H1 é o barramento de campo da tecnologia Foundation Fieldbus, usado para conectar instrumentos de processo.</p>
+                        <p>O barramento pode transportar comunicação e alimentação. Algumas estratégias permitem distribuir funções de controle entre equipamentos compatíveis.</p>
+                        <p class="dado">Segmentos, fontes, terminadores e instrumentos precisam ser dimensionados em conjunto.</p>
                     </article>
                     <article class="item">
                         <h3>AS-i</h3>
-                        <p>Uma solução simples para conectar sensores e atuadores. Dados e alimentação podem compartilhar o mesmo cabo.</p>
+                        <p>AS-i (Actuator Sensor Interface) conecta sensores e atuadores simples ao sistema de controle por meio de um barramento de campo.</p>
+                        <p>Um cabo de dois condutores pode transportar dados e alimentação. A instalação costuma usar módulos ou conexões próprios para facilitar a ligação dos dispositivos.</p>
+                        <p class="dado">É indicado para sinais simples de campo; confirme a quantidade de nós e os limites da versão usada.</p>
                     </article>
                     <article class="item">
                         <h3>IO-Link</h3>
-                        <p>Conexão ponto a ponto para comunicar, configurar e obter informações de sensores e atuadores.</p>
+                        <p>IO-Link é uma comunicação digital ponto a ponto entre um mestre IO-Link e um sensor ou atuador. Não é uma rede Ethernet nem um barramento compartilhado entre vários instrumentos.</p>
+                        <p>Além do valor medido, pode transmitir parâmetros, identificação do dispositivo e informações de diagnóstico. Isso facilita a substituição e a configuração de equipamentos.</p>
+                        <p class="dado">O mestre faz a conexão com a rede de controle. Comprimento e tipo de cabo devem respeitar a especificação do sistema.</p>
                     </article>
                 </div>
             </div>
@@ -99,9 +124,30 @@
                 <div class="lista">
                     <article class="item">
                         <h3>WirelessHART</h3>
-                        <p>Rede sem fio usada principalmente para monitorar instrumentos e processos industriais.</p>
+                        <p>WirelessHART conecta instrumentos de processo por rádio, sendo útil para monitoramento e para pontos onde instalar cabos é difícil ou caro.</p>
+                        <p>Os dispositivos podem encaminhar mensagens uns pelos outros, formando uma malha com caminhos alternativos. A rede inclui mecanismos de sincronização e segurança próprios do protocolo.</p>
+                        <p class="dado">Cobertura e confiabilidade dependem do posicionamento dos dispositivos, das condições de rádio e do planejamento da rede.</p>
                     </article>
                 </div>
+            </div>
+        </section>
+
+        <section class="secao">
+            <p class="rotulo">ANTES DE INSTALAR</p>
+            <h2>O que verificar em uma rede industrial?</h2>
+            <div class="cartoes checklist">
+                <article class="cartao">
+                    <h3>Compatibilidade</h3>
+                    <p>Confira se controladores, instrumentos, conectores e ferramentas de configuração aceitam o mesmo protocolo e os perfis necessários.</p>
+                </article>
+                <article class="cartao">
+                    <h3>Ambiente e instalação</h3>
+                    <p>Considere interferência elétrica, aterramento, blindagem, temperatura, vibração, umidade e requisitos de áreas classificadas.</p>
+                </article>
+                <article class="cartao">
+                    <h3>Operação e segurança</h3>
+                    <p>Planeje diagnóstico, documentação, cópias de configuração, controle de acesso e mudanças na rede. Evite conectar redes sem autorização.</p>
+                </article>
             </div>
         </section>
 
