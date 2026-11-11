@@ -283,6 +283,26 @@ h2 {
     text-decoration: none;
 }
 
+.contato-cartao .rotulo {
+    margin-bottom: 6px;
+    color: var(--green);
+}
+
+.contato-valor {
+    margin-bottom: 0;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.contato-link {
+    overflow-wrap: anywhere;
+}
+
+.contato-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 .fundamentos .cartoes {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
