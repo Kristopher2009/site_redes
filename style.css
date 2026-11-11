@@ -190,6 +190,28 @@ h2 {
     font-size: 19px;
 }
 
+.cabecalho-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 60px;
+    margin-bottom: 16px;
+}
+
+.cabecalho-item h3 {
+    margin-bottom: 0;
+}
+
+.icone-tecnologia {
+    display: block;
+    flex: 0 0 58px;
+    width: 58px;
+    height: 58px;
+    padding: 7px;
+    border-radius: 12px;
+    background: var(--lime);
+}
+
 .cartao p,
 .item p,
 .fundamentos p {

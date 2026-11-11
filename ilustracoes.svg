@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="corporate-ethernet" viewBox="0 0 96 96">
+    <g fill="none" stroke="#326f5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <rect x="30" y="46" width="54" height="32" rx="5"/>
+      <path d="M30 61H17V35"/>
+      <rect x="9" y="14" width="16" height="22" rx="3"/>
+      <path d="M13 20h8M13 25h8M13 30h8M40 57h5M52 57h5M64 57h5M76 57h3"/>
+      <circle cx="40" cy="69" r="2" fill="#e46b55" stroke="none"/>
+      <circle cx="52" cy="69" r="2" fill="#e46b55" stroke="none"/>
+      <circle cx="64" cy="69" r="2" fill="#e46b55" stroke="none"/>
+    </g>
+  </symbol>
+  <symbol id="corporate-wifi" viewBox="0 0 96 96">
+    <g fill="none" stroke="#326f5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <path d="M18 37a44 44 0 0 1 60 0M27 47a31 31 0 0 1 42 0M37 57a17 17 0 0 1 22 0"/>
+      <circle cx="48" cy="67" r="3" fill="#e46b55" stroke="none"/>
+      <rect x="23" y="73" width="50" height="10" rx="5"/>
+      <path d="M34 73v-5m28 5v-5"/>
+    </g>
+  </symbol>
+  <symbol id="corporate-fiber" viewBox="0 0 96 96">
+    <g fill="none" stroke="#326f5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <path d="M15 28h16l8 8v24l-8 8H15zM81 28H65l-8 8v24l8 8h16z"/>
+      <path d="M39 42h18M39 48h18M39 54h18"/>
+      <path d="m43 38-5 10 8-2-5 10M57 38l5 10-8-2 5 10"/>
+      <circle cx="20" cy="48" r="2" fill="#e46b55" stroke="none"/>
+      <circle cx="76" cy="48" r="2" fill="#e46b55" stroke="none"/>
+    </g>
+  </symbol>
+  <symbol id="profinet" viewBox="0 0 96 96">
+    <g fill="none" stroke="#326f5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <rect x="34" y="35" width="30" height="27" rx="4"/>
+      <path d="M41 43h16M41 50h10M49 62v9M24 71h48M24 71V56m48 15V56"/>
+      <rect x="14" y="47" width="20" height="18" rx="3"/>
+      <rect x="62" y="47" width="20" height="18" rx="3"/>
+      <path d="M48 35V23"/>
+      <circle cx="48" cy="17" r="6" fill="#e46b55"/>
+    </g>
+  </symbol>
+  <symbol id="ethernet-ip" viewBox="0 0 96 96">
+    <g fill="none" stroke="#326f5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <rect x="34" y="37" width="28" height="26" rx="4"/>
+      <path d="M48 37V22M34 50H18m44 0h16M39 63v12h18V63"/>
+      <circle cx="48" cy="17" r="6"/>
+      <circle cx="13" cy="50" r="6" fill="#e46b55"/>
+      <circle cx="83" cy="50" r="6" fill="#e46b55"/>
+      <path d="M44 47h8m-8 7h8"/>
+    </g>
+  </symbol>
+  <symbol id="ethercat" viewBox="0 0 96 96">
+    <g fill="none" stroke="#326f5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <rect x="34" y="35" width="28" height="28" rx="4"/>
+      <path d="M48 35V20h22v21M62 49h17v19H56v-5M34 49H17v19h19v-5"/>
+      <circle cx="70" cy="20" r="5" fill="#e46b55"/>
+      <circle cx="79" cy="68" r="5"/>
+      <circle cx="17" cy="68" r="5"/>
+      <path d="M43 44h10v10H43z"/>
+    </g>
+  </symbol>
+  <symbol id="fieldbus-hse" viewBox="0 0 96 96">
+    <g fill="none" stroke="#326f5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <path d="M14 48h68M29 48V29m19 19V68m19-20V29"/>
+      <rect x="18" y="15" width="22" height="14" rx="3"/>
+      <rect x="57" y="15" width="22" height="14" rx="3"/>
+      <rect x="37" y="68" width="22" height="14" rx="3"/>
+      <circle cx="14" cy="48" r="4" fill="#e46b55"/>
+      <circle cx="82" cy="48" r="4"/>
+    </g>
+  </symbol>
+  <symbol id="modbus-rtu" viewBox="0 0 96 96">
+    <g fill="none" stroke="#326f5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <path d="M14 53h68M24 53V39m24 14V39m24 14V39"/>
+      <rect x="15" y="20" width="18" height="19" rx="3"/>
+      <rect x="39" y="20" width="18" height="19" rx="3"/>
+      <rect x="63" y="20" width="18" height="19" rx="3"/>
+      <path d="M20 27h8m-8 6h5M44 27h8m-8 6h5M68 27h8m-8 6h5"/>
+      <circle cx="48" cy="68" r="7" fill="#e46b55"/>
+      <path d="M48 61v-8"/>
+    </g>
+  </symbol>
+  <symbol id="profibus-dp" viewBox="0 0 96 96">
+    <g fill="none" stroke="#326f5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <path d="M17 66h62M25 66V47m23 19V47m23 19V47"/>
+      <rect x="16" y="24" width="18" height="23" rx="3"/>
+      <rect x="39" y="24" width="18" height="23" rx="3"/>
+      <rect x="62" y="24" width="18" height="23" rx="3"/>
+      <path d="M21 31h8m-8 7h8m15-7h8m-8 7h8m15-7h8m-8 7h8"/>
+      <circle cx="17" cy="66" r="4" fill="#e46b55"/>
+      <circle cx="79" cy="66" r="4"/>
+    </g>
+  </symbol>
+  <symbol id="devicenet" viewBox="0 0 96 96">
+    <g fill="none" stroke="#326f5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <path d="M14 59h68M25 59V43m23 16V43m23 16V43"/>
+      <rect x="16" y="24" width="18" height="19" rx="3"/>
+      <rect x="39" y="24" width="18" height="19" rx="3"/>
+      <rect x="62" y="24" width="18" height="19" rx="3"/>
+      <path d="M22 30h6m-6 7h6m17-7h6m-6 7h6m17-7h6m-6 7h6"/>
+      <path d="M29 73h38"/>
+      <circle cx="29" cy="73" r="4" fill="#e46b55"/>
+      <circle cx="67" cy="73" r="4"/>
+    </g>
+  </symbol>
+  <symbol id="profibus-pa" viewBox="0 0 96 96">
+    <g fill="none" stroke="#326f5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <path d="M15 68h66M30 68V55m36 13V55"/>
+      <rect x="20" y="34" width="20" height="21" rx="4"/>
+      <rect x="56" y="34" width="20" height="21" rx="4"/>
+      <path d="M30 34v-9h36v9M30 42h10m16 0h10"/>
+      <circle cx="30" cy="68" r="4" fill="#e46b55"/>
+      <circle cx="66" cy="68" r="4"/>
+      <path d="M48 25v-9m-6 0h12"/>
+    </g>
+  </symbol>
+  <symbol id="hart" viewBox="0 0 96 96">
+    <g fill="none" stroke="#326f5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <path d="M15 67h66M22 67V53m52 14V53"/>
+      <rect x="18" y="32" width="18" height="21" rx="4"/>
+      <rect x="60" y="32" width="18" height="21" rx="4"/>
+      <path d="M36 42h24M22 41h10m38 0h4"/>
+      <path d="M39 25c4-8 8 8 12 0s8 8 12 0"/>
+      <circle cx="22" cy="67" r="4" fill="#e46b55"/>
+      <circle cx="74" cy="67" r="4"/>
+    </g>
+  </symbol>
+  <symbol id="fieldbus-h1" viewBox="0 0 96 96">
+    <g fill="none" stroke="#326f5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <path d="M14 62h68M28 62V46m40 16V46"/>
+      <rect x="18" y="25" width="20" height="21" rx="4"/>
+      <rect x="58" y="25" width="20" height="21" rx="4"/>
+      <path d="M23 32h10m-10 7h10m30-7h10m-10 7h10"/>
+      <path d="M29 76h38M48 62v14"/>
+      <circle cx="14" cy="62" r="4" fill="#e46b55"/>
+      <circle cx="82" cy="62" r="4"/>
+    </g>
+  </symbol>
+  <symbol id="asi" viewBox="0 0 96 96">
+    <g fill="none" stroke="#326f5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <path d="M14 64h68M27 64V48m21 16V48m21 16V48"/>
+      <circle cx="27" cy="36" r="10"/>
+      <rect x="40" y="27" width="17" height="21" rx="3"/>
+      <path d="M45 33h7m-7 6h7"/>
+      <path d="M65 29h9v19h-9zM69 25v-7m-5 0h10"/>
+      <circle cx="14" cy="64" r="4" fill="#e46b55"/>
+      <circle cx="82" cy="64" r="4"/>
+    </g>
+  </symbol>
+  <symbol id="io-link" viewBox="0 0 96 96">
+    <g fill="none" stroke="#326f5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <rect x="13" y="36" width="30" height="30" rx="4"/>
+      <rect x="60" y="36" width="23" height="30" rx="4"/>
+      <path d="M43 51h17M23 45h10m-10 8h10m-10 8h10M66 44h11m-11 7h11"/>
+      <path d="M71 36V24m-5 0h10"/>
+      <circle cx="48" cy="51" r="4" fill="#e46b55"/>
+      <path d="M28 66v9h42v-9"/>
+    </g>
+  </symbol>
+  <symbol id="wireless-hart" viewBox="0 0 96 96">
+    <g fill="none" stroke="#326f5d" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <path d="m25 31 23 14 23-14M25 65l23-20 23 20"/>
+      <circle cx="25" cy="31" r="8"/>
+      <circle cx="71" cy="31" r="8"/>
+      <circle cx="48" cy="45" r="8" fill="#e46b55"/>
+      <circle cx="25" cy="65" r="8"/>
+      <circle cx="71" cy="65" r="8"/>
+      <path d="M48 37V21m-5 0a7 7 0 0 1 10 0m-15-5a14 14 0 0 1 20 0"/>
+    </g>
+  </symbol>
+</svg>
