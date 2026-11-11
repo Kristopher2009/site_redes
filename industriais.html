@@ -28,45 +28,82 @@
         <section class="secao">
             <p class="rotulo">TECNOLOGIAS POR GRUPO</p>
             <h2>Onde cada rede é usada?</h2>
+            <p class="apoio-tecnico">As explicações simples continuam visíveis. Abra “Detalhes técnicos” para ver cabeamento, sinais, comunicação e desempenho conforme o PDF. Valores são típicos e devem ser confirmados nas especificações dos equipamentos.</p>
 
             <div class="grupo">
                 <h3>Ethernet industrial</h3>
                 <div class="lista">
                     <article class="item">
                         <div class="cabecalho-item">
-                            <svg class="icone-tecnologia" aria-hidden="true" focusable="false"><use href="ilustracoes.svg#profinet"></use></svg>
+                            <img class="foto-tecnologia" src="assets/photos/profinet.jpg" alt="Módulos de controle conectados em um painel industrial" loading="lazy" decoding="async">
                             <h3>PROFINET</h3>
                         </div>
                         <p>Comunicação Ethernet industrial usada entre controladores, módulos de entrada e saída, acionamentos e outros equipamentos.</p>
                         <p>Permite trocar dados de processo e informações de diagnóstico. Suas opções de comunicação atendem a diferentes necessidades, desde automação geral até aplicações com sincronização mais exigente.</p>
                         <p class="dado">O desempenho depende dos dispositivos, da configuração da rede e do perfil de comunicação escolhido.</p>
+                        <details class="detalhes-tecnicos">
+                            <summary>Detalhes técnicos</summary>
+                            <dl>
+                                <div><dt>Cabeamento</dt><dd>Usa Ethernet 100BASE-TX em cabo industrial Cat5e verde, de 4 ou 8 fios; Tipo A, B e C atendem instalações fixas, flexíveis e móveis. Também pode usar fibra (POF, HCS, multimodo/monomodo) ou Wi-Fi. Conectores: RJ45 IP20, push-pull, M12 D-coded IP65/67 e SC-RJ/POF. Topologias: estrela, árvore, linha e anel MRP; PRP é outra opção de redundância.</dd></div>
+                                <div><dt>Sinais elétricos</dt><dd>100BASE-TX usa 4B5B e MLT-3 em full-duplex a 100 Mb/s. A alimentação costuma ser separada em 24 Vcc; Ethernet-APL (10BASE-T1L) pode levar dados e energia pelo mesmo par e atender a aplicações Ex. Cabo blindado e aterramento ajudam contra ruído; PROFIsafe atende à segurança funcional.</dd></div>
+                                <div><dt>Comunicação</dt><dd>NRT usa TCP/IP para configuração e diagnóstico; RT envia dados priorizados; IRT reserva intervalos sincronizados para tráfego crítico. O modelo envolve I/O Controller, I/O Device e I/O Supervisor; DCP é usado para descoberta. Quadros RT usam EtherType 0x8892 e incluem FrameID, dados cíclicos, APDU Status (CycleCounter, DataStatus e TransferStatus) e FCS CRC-32.</dd></div>
+                                <div><dt>Desempenho</dt><dd>Taxas usuais: 100 Mb/s e 1 Gb/s. O cobre permite até 100 m por segmento; a fibra vai de cerca de 2 km em multimodo a dezenas de quilômetros em monomodo. RT costuma operar em ciclos de 1–10 ms; IRT pode partir de 31,25 µs, com jitter abaixo de 1 µs. É usado principalmente em Campo e Controle, integrado à Supervisão.</dd></div>
+                            </dl>
+                        </details>
                     </article>
                     <article class="item">
                         <div class="cabecalho-item">
-                            <svg class="icone-tecnologia" aria-hidden="true" focusable="false"><use href="ilustracoes.svg#ethernet-ip"></use></svg>
+                            <img class="foto-tecnologia" src="assets/photos/ethernet-ip.jpg" alt="Componentes e relés instalados em um painel de controle" loading="lazy" decoding="async">
                             <h3>EtherNet/IP</h3>
                         </div>
                         <p>Usa a família de protocolos CIP sobre Ethernet e IP. É aplicado na comunicação entre controladores, módulos de entrada e saída, sensores e acionamentos.</p>
                         <p>Mensagens explícitas são úteis para configuração e diagnóstico; dados de entrada e saída podem ser trocados periodicamente para controle.</p>
                         <p class="dado">A rede pode compartilhar infraestrutura Ethernet padrão, mas deve ser projetada e configurada para os requisitos industriais da aplicação.</p>
+                        <details class="detalhes-tecnicos">
+                            <summary>Detalhes técnicos</summary>
+                            <dl>
+                                <div><dt>Cabeamento</dt><dd>Usa Ethernet padrão em UTP/STP Cat5e ou Cat6 e também fibra. Conectores comuns são RJ45 e M12 D-coded. Topologias incluem estrela, árvore, linha e anel DLR, que permite recuperar falhas em poucos milissegundos.</dd></div>
+                                <div><dt>Sinais elétricos</dt><dd>Segue a sinalização IEEE 802.3 (10/100/1000BASE-T). A alimentação normalmente é separada em 24 Vcc, embora alguns dispositivos usem PoE. Cabo industrial blindado, aterramento e, em áreas classificadas, barreiras ou Ethernet-APL são opções de proteção.</dd></div>
+                                <div><dt>Comunicação</dt><dd>O CIP (mantido pela ODVA) usa o modelo produtor/consumidor. Mensagens explícitas de configuração/diagnóstico usam TCP (porta 44818); mensagens implícitas de I/O cíclico usam UDP (porta 2222), geralmente multicast, com intervalo RPI configurável. O encapsulamento inclui comando, tamanho, session handle, status, sender context, opções e dados CIP.</dd></div>
+                                <div><dt>Desempenho</dt><dd>Taxas: 10, 100 e 1000 Mb/s; o cobre permite até 100 m por segmento. Não é estritamente determinístico; switches gerenciados, QoS e IGMP snooping ajudam em ciclos de poucos milissegundos. CIP Sync (IEEE 1588) e CIP Motion oferecem sincronismo na ordem de microssegundos. Atua em Campo e Controle e integra-se à Supervisão e à Integração.</dd></div>
+                            </dl>
+                        </details>
                     </article>
                     <article class="item">
                         <div class="cabecalho-item">
-                            <svg class="icone-tecnologia" aria-hidden="true" focusable="false"><use href="ilustracoes.svg#ethercat"></use></svg>
+                            <img class="foto-tecnologia" src="assets/photos/industrial-panel.jpg" alt="Painel de automação com módulos e indicadores" loading="lazy" decoding="async">
                             <h3>EtherCAT</h3>
                         </div>
                         <p>EtherCAT foi desenvolvido para comunicação em tempo real em sistemas de automação. É usado, por exemplo, para conectar controladores, módulos de entrada e saída e servodrives.</p>
                         <p>Os dispositivos podem processar os dados enquanto o quadro percorre a rede. Recursos de sincronização ajudam aplicações que precisam coordenar movimentos.</p>
                         <p class="dado">Topologia, ciclo de comunicação e precisão dependem dos equipamentos e da configuração.</p>
+                        <details class="detalhes-tecnicos">
+                            <summary>Detalhes técnicos</summary>
+                            <dl>
+                                <div><dt>Cabeamento</dt><dd>Usa 100BASE-TX em Cat5e ou fibra 100BASE-FX; módulos podem comunicar pelo E-bus (LVDS). Conectores incluem RJ45, M8 e M12 D-coded. Topologias comuns: linha, árvore, estrela e anel redundante; o documento cita até 65.535 nós.</dd></div>
+                                <div><dt>Sinais elétricos</dt><dd>Ethernet 100BASE-TX full-duplex. Na versão EtherCAT P, o mesmo cabo de 4 fios pode levar dados e 24 Vcc para o sistema e periféricos. Cabo blindado e isolamento nas portas ajudam a proteger a rede industrial.</dd></div>
+                                <div><dt>Comunicação</dt><dd>O mestre envia um quadro que percorre os escravos; cada dispositivo lê e insere dados “em voo” (processing on the fly). Escravos usam um controlador ESC; o mestre pode usar uma porta Ethernet comum. Distributed Clocks sincroniza os nós. O quadro usa EtherType 0x88A4, cabeçalho, datagramas (comando, índice, endereço, comprimento, dados e Working Counter) e FCS CRC-32.</dd></div>
+                                <div><dt>Desempenho</dt><dd>Taxa de 100 Mb/s (1 Gb/s no EtherCAT G); cerca de 100 m entre nós em cobre, até 2 km em fibra multimodo ou 40 km em monomodo. É hard real-time, com ciclos a partir de aproximadamente 31,25 µs e jitter inferior a 1 µs. Usado em Campo e Controle para movimento, robótica, CNC e I/O rápido.</dd></div>
+                            </dl>
+                        </details>
                     </article>
                     <article class="item">
                         <div class="cabecalho-item">
-                            <svg class="icone-tecnologia" aria-hidden="true" focusable="false"><use href="ilustracoes.svg#fieldbus-hse"></use></svg>
+                            <img class="foto-tecnologia" src="assets/photos/fieldbus-hse.jpg" alt="Equipamentos elétricos instalados em uma área industrial" loading="lazy" decoding="async">
                             <h3>Foundation Fieldbus HSE</h3>
                         </div>
                         <p>HSE significa High Speed Ethernet. É a parte Ethernet da tecnologia Foundation Fieldbus e pode conectar controladores, estações e segmentos H1.</p>
                         <p>É utilizada como backbone de comunicação entre equipamentos de automação de processo.</p>
                         <p class="dado">O projeto precisa considerar compatibilidade entre dispositivos, integração dos segmentos e requisitos de disponibilidade.</p>
+                        <details class="detalhes-tecnicos">
+                            <summary>Detalhes técnicos</summary>
+                            <dl>
+                                <div><dt>Cabeamento</dt><dd>Usa Ethernet 100BASE-TX em Cat5e ou fibra, com conectores RJ45, SC ou LC. Pode formar estrela ou anel e atuar como backbone, ligando segmentos H1 por meio de linking devices.</dd></div>
+                                <div><dt>Sinais elétricos</dt><dd>Em cobre, segue a sinalização 100BASE-TX; a alimentação é separada. Cabos blindados e fibra entre áreas distantes ajudam a proteger a instalação contra interferências.</dd></div>
+                                <div><dt>Comunicação</dt><dd>É Ethernet comutada full-duplex. Sobre TCP/UDP/IP rodam as camadas FMS/FDA do Fieldbus. Pode haver redundância de rede e de controladores. O quadro Ethernet padrão (FCS CRC-32) transporta a mensagem Fieldbus.</dd></div>
+                                <div><dt>Desempenho</dt><dd>Opera normalmente a 100 Mb/s, com versões de 1 Gb/s; cobre: até 100 m por segmento, e fibra: quilômetros. Não é estritamente determinístico, mas atende à supervisão e à integração de controladores e linking devices. O documento o situa em Controle e Supervisão.</dd></div>
+                            </dl>
+                        </details>
                     </article>
                 </div>
             </div>
@@ -76,30 +113,57 @@
                 <div class="lista">
                     <article class="item">
                         <div class="cabecalho-item">
-                            <svg class="icone-tecnologia" aria-hidden="true" focusable="false"><use href="ilustracoes.svg#modbus-rtu"></use></svg>
+                            <img class="foto-tecnologia" src="assets/photos/modbus-rtu.jpg" alt="Cabos de comunicação conectados a equipamentos de rede" loading="lazy" decoding="async">
                             <h3>Modbus RTU</h3>
                         </div>
                         <p>Modbus RTU é um protocolo serial usado por controladores, medidores e acionamentos. Os dados são organizados em mensagens com endereço e verificação de erro.</p>
                         <p>É comum encontrar interfaces RS-485, que permitem conectar vários equipamentos em um barramento, e também equipamentos com outras interfaces seriais.</p>
                         <p class="dado">É simples de integrar, mas a velocidade, a distância e a quantidade de dispositivos dependem da interface e das condições da instalação.</p>
+                        <details class="detalhes-tecnicos">
+                            <summary>Detalhes técnicos</summary>
+                            <dl>
+                                <div><dt>Cabeamento</dt><dd>Normalmente usa par trançado blindado RS-485 (2 fios half-duplex ou 4 fios full-duplex); também existe RS-232 ponto a ponto. Conexões podem ser por bornes, D-Sub de 9 pinos ou RJ45. A topologia RS-485 é um barramento linear com terminação de 120 Ω nas duas extremidades e polarização; o documento indica até 32 cargas unitárias por segmento e 247 endereços.</dd></div>
+                                <div><dt>Sinais elétricos</dt><dd>RS-485 transmite diferencialmente pelas linhas A/B; o limiar de recepção citado é ±200 mV e a faixa de modo comum é −7 a +12 V. A transmissão serial é assíncrona, com start, 8 bits de dados, paridade par ou nenhuma e 1 ou 2 bits de parada (11 bits no formato comum). A alimentação é separada; blindagem aterrada em um ponto e isolamento galvânico opcional ajudam a proteger a instalação.</dd></div>
+                                <div><dt>Comunicação</dt><dd>O mestre inicia as mensagens e os escravos respondem quando endereçados; endereço 0 é broadcast sem resposta. Um silêncio de 3,5 tempos de caractere delimita quadros. O quadro tem endereço, função, dados (até 252 bytes) e CRC-16, com tamanho total de até 256 bytes.</dd></div>
+                                <div><dt>Desempenho</dt><dd>Taxas de 1200 a 115200 b/s; 9600 e 19200 b/s são comuns. O documento cita cerca de 1200 m a 9600 b/s, com distância menor em taxas maiores. O polling é previsível, mas o ciclo cresce com o número de escravos e não oferece tempo real estrito. Usado entre Campo e Controle.</dd></div>
+                            </dl>
+                        </details>
                     </article>
                     <article class="item">
                         <div class="cabecalho-item">
-                            <svg class="icone-tecnologia" aria-hidden="true" focusable="false"><use href="ilustracoes.svg#profibus-dp"></use></svg>
+                            <img class="foto-tecnologia" src="assets/photos/profibus-dp.jpg" alt="Fiação e equipamentos em um painel elétrico" loading="lazy" decoding="async">
                             <h3>PROFIBUS DP</h3>
                         </div>
                         <p>PROFIBUS DP conecta controladores a dispositivos periféricos, como módulos de entrada e saída e acionamentos. DP refere-se à comunicação descentralizada de periféricos.</p>
                         <p>O meio físico elétrico RS-485 é muito usado. Os equipamentos trocam dados cíclicos e também podem fornecer informações de diagnóstico.</p>
                         <p class="dado">Taxa de comunicação e comprimento do segmento são relacionados: valores maiores de velocidade costumam exigir trechos mais curtos.</p>
+                        <details class="detalhes-tecnicos">
+                            <summary>Detalhes técnicos</summary>
+                            <dl>
+                                <div><dt>Cabeamento</dt><dd>Usa par trançado blindado RS-485 Tipo A (150 Ω, cerca de 0,34 mm², geralmente roxo) ou fibra óptica. Conectores incluem D-Sub de 9 pinos (pinos 3=B, 8=A, 5=GND, 6=+5 V para terminação), M12 B-coded e bornes. O barramento admite até 32 estações por segmento; repetidores permitem ampliar a rede e chegar aos endereços 0–125.</dd></div>
+                                <div><dt>Sinais elétricos</dt><dd>RS-485 usa sinal diferencial NRZ e caracteres UART de 11 bits (start, 8 dados, paridade par e stop). Há terminação ativa nas extremidades (390/220/390 Ω). A alimentação é separada; blindagem nas duas extremidades e equipotencialização são importantes. A variante RS-485-IS é destinada a aplicações em áreas classificadas.</dd></div>
+                                <div><dt>Comunicação</dt><dd>Usa passagem de token entre mestres e comunicação mestre-escravo com os dispositivos. DP-V0 oferece dados cíclicos; DP-V1, serviços acíclicos e alarmes; DP-V2, isocronismo e comunicação escravo-escravo. Os quadros têm delimitadores SD1–SD4 ou SC, endereços, controle, dados, FCS e fim.</dd></div>
+                                <div><dt>Desempenho</dt><dd>Taxas de 9,6 kb/s a 12 Mb/s. Distâncias típicas caem conforme a velocidade aumenta: até 1200 m em 93,75 kb/s, 1000 m em 187,5 kb/s, 400 m em 500 kb/s, 200 m em 1,5 Mb/s e 100 m entre 3 e 12 Mb/s. É determinístico, com ciclos típicos de 1–10 ms, nos níveis de Campo e Controle.</dd></div>
+                            </dl>
+                        </details>
                     </article>
                     <article class="item">
                         <div class="cabecalho-item">
-                            <svg class="icone-tecnologia" aria-hidden="true" focusable="false"><use href="ilustracoes.svg#devicenet"></use></svg>
+                            <img class="foto-tecnologia" src="assets/photos/devicenet.jpg" alt="Componentes de controle industrial conectados por cabos" loading="lazy" decoding="async">
                             <h3>DeviceNet</h3>
                         </div>
                         <p>DeviceNet é uma rede industrial baseada no barramento CAN. Ela conecta controladores a sensores, atuadores, módulos e acionamentos.</p>
                         <p>O cabo pode transportar comunicação e alimentação para os dispositivos, conforme o projeto e os limites elétricos do segmento.</p>
                         <p class="dado">Verifique corrente, comprimento, terminações e compatibilidade antes de ampliar ou modificar um segmento.</p>
+                        <details class="detalhes-tecnicos">
+                            <summary>Detalhes técnicos</summary>
+                            <dl>
+                                <div><dt>Cabeamento</dt><dd>Usa cabo CAN de 4 fios: um par de sinal e outro de alimentação 24 Vcc. Há versões grossa (thick), fina (thin) e chata; conectores incluem bornes de 5 posições, micro M12 e mini de 18 mm. A topologia é tronco com derivações, terminada por 121 Ω, com até 64 nós.</dd></div>
+                                <div><dt>Sinais elétricos</dt><dd>CAN transmite diferencialmente com codificação NRZ e bit stuffing, usando estados dominante e recessivo. O barramento fornece 24 Vcc (faixa indicada de 11 a 25 V), com até 8 A no tronco. Blindagem aterrada em um ponto, transceptores isolados e barreiras externas em áreas Ex ajudam na proteção.</dd></div>
+                                <div><dt>Comunicação</dt><dd>CSMA/NBA arbitra o acesso sem destruir o quadro: vence o identificador de maior prioridade (valor numérico menor). Há mensagens de I/O polled, strobed, cíclicas e change-of-state, além de explícitas. O quadro CAN 2.0A inclui início (SOF), identificador de 11 bits, RTR, controle, 0–8 bytes de dados, CRC-15, ACK e fim (EOF).</dd></div>
+                                <div><dt>Desempenho</dt><dd>Taxas de 125, 250 e 500 kb/s. Cabo grosso: até 500 m a 125 kb/s, 250 m a 250 kb/s e 100 m a 500 kb/s; cabo fino: cerca de 100 m. A arbitragem por prioridade torna o tempo previsível (tempo real brando). Usado em Campo e Controle.</dd></div>
+                            </dl>
+                        </details>
                     </article>
                 </div>
             </div>
@@ -109,48 +173,93 @@
                 <div class="lista">
                     <article class="item">
                         <div class="cabecalho-item">
-                            <svg class="icone-tecnologia" aria-hidden="true" focusable="false"><use href="ilustracoes.svg#profibus-pa"></use></svg>
+                            <img class="foto-tecnologia" src="assets/photos/profibus-pa.jpg" alt="Manômetros instalados em tubulações industriais" loading="lazy" decoding="async">
                             <h3>PROFIBUS PA</h3>
                         </div>
                         <p>PROFIBUS PA é voltado a instrumentos de processo, como transmissores de pressão, temperatura e vazão.</p>
                         <p>A comunicação e a alimentação podem compartilhar o barramento. Isso reduz cabeamento, mas exige planejamento correto da fonte e dos segmentos.</p>
                         <p class="dado">Instalações em áreas classificadas exigem equipamentos, barreiras e práticas apropriados à classificação do local.</p>
+                        <details class="detalhes-tecnicos">
+                            <summary>Detalhes técnicos</summary>
+                            <dl>
+                                <div><dt>Cabeamento</dt><dd>Usa par trançado blindado Tipo A, conforme IEC 61158-2, normalmente azul. Ligações são feitas em bornes, caixas de junção/acopladores ou conectores M12. Topologias incluem tronco com derivações, árvore e estrela; o tronco recebe terminadores de 100 Ω + 1 µF nas duas extremidades.</dd></div>
+                                <div><dt>Sinais elétricos</dt><dd>MBP (Manchester Bus Powered) usa Manchester II a 31,25 kb/s, com modulação de corrente de cerca de ±9 mA (0,75–1 Vpp) sobre a alimentação. O mesmo par fornece 9–32 Vcc; instrumentos costumam consumir 10–15 mA. O documento cita FISCO em torno de 1000 m em IIC e 1900 m em IIB; blindagem e aterramento seguem as regras da instalação.</dd></div>
+                                <div><dt>Comunicação</dt><dd>Opera como mestre-escravo com serviços cíclicos e acíclicos PROFIBUS DP-V1. Um acoplador de segmento pode converter RS-485 para MBP; também pode ser usado um DP/PA link. Os quadros PROFIBUS DP (SD1–SD4) são encapsulados no formato MBP, com preâmbulo e delimitadores.</dd></div>
+                                <div><dt>Desempenho</dt><dd>A taxa é 31,25 kb/s. O documento cita até 1900 m por segmento em área segura e cerca de 1000 m em área Ex (o limite depende da classificação e do projeto). É determinístico, com ciclos típicos de 100–500 ms, adequado a processos contínuos no nível de Campo.</dd></div>
+                            </dl>
+                        </details>
                     </article>
                     <article class="item">
                         <div class="cabecalho-item">
-                            <svg class="icone-tecnologia" aria-hidden="true" focusable="false"><use href="ilustracoes.svg#hart"></use></svg>
+                            <img class="foto-tecnologia" src="assets/photos/hart.jpg" alt="Indicadores de pressão em equipamento industrial" loading="lazy" decoding="async">
                             <h3>HART</h3>
                         </div>
                         <p>HART permite comunicação digital sobreposta ao sinal analógico de 4–20 mA usado por muitos instrumentos.</p>
                         <p>O sinal analógico continua representando a variável medida, enquanto a comunicação digital pode levar configuração, identificação e diagnóstico do instrumento.</p>
                         <p class="dado">A qualidade da comunicação depende do instrumento, da carga e das características elétricas do circuito.</p>
+                        <details class="detalhes-tecnicos">
+                            <summary>Detalhes técnicos</summary>
+                            <dl>
+                                <div><dt>Cabeamento</dt><dd>Usa o par trançado do laço 4–20 mA, com cabo blindado e resistência de laço indicada entre 230 e 600 Ω. A ligação é ponto a ponto ou multidrop; comunicadores portáteis conectam-se em paralelo aos bornes do instrumento. Multidrop comporta até 15 dispositivos no HART 5 e até 63 nas versões 6/7.</dd></div>
+                                <div><dt>Sinais elétricos</dt><dd>Bell 202 FSK sobrepõe tons de 1200 Hz (“1”) e 2200 Hz (“0”), com amplitude de cerca de ±0,5 mA; a média nula mantém a medição analógica. O transmissor costuma ser alimentado pelo próprio laço de dois fios. Barreiras zener ou isoladores de segurança intrínseca podem ser necessários em área classificada.</dd></div>
+                                <div><dt>Comunicação</dt><dd>O modo pergunta/resposta admite mestre primário (sistema de controle), secundário (comunicador) e opção burst. O quadro pode começar com 5–20 bytes de preâmbulo 0xFF e inclui delimitador, endereço curto (1 byte) ou longo (5 bytes), comando, contagem, status na resposta, dados e checksum XOR. Cada caractere tem start, 8 dados, paridade ímpar e stop (11 bits).</dd></div>
+                                <div><dt>Desempenho</dt><dd>A taxa digital é 1200 b/s, aproximadamente 2–3 transações por segundo. O documento indica até cerca de 3000 m em cabo simples e 1500 m em multidrop, conforme a capacitância. O digital serve a configuração e diagnóstico; o sinal analógico continua responsável pelo controle em tempo real. Atua no nível de Campo.</dd></div>
+                            </dl>
+                        </details>
                     </article>
                     <article class="item">
                         <div class="cabecalho-item">
-                            <svg class="icone-tecnologia" aria-hidden="true" focusable="false"><use href="ilustracoes.svg#fieldbus-h1"></use></svg>
+                            <img class="foto-tecnologia" src="assets/photos/fieldbus-h1.jpg" alt="Válvulas e instrumentos em uma instalação de processo" loading="lazy" decoding="async">
                             <h3>Foundation Fieldbus H1</h3>
                         </div>
                         <p>H1 é o barramento de campo da tecnologia Foundation Fieldbus, usado para conectar instrumentos de processo.</p>
                         <p>O barramento pode transportar comunicação e alimentação. Algumas estratégias permitem distribuir funções de controle entre equipamentos compatíveis.</p>
                         <p class="dado">Segmentos, fontes, terminadores e instrumentos precisam ser dimensionados em conjunto.</p>
+                        <details class="detalhes-tecnicos">
+                            <summary>Detalhes técnicos</summary>
+                            <dl>
+                                <div><dt>Cabeamento</dt><dd>Usa par trançado blindado Tipo A, conforme IEC 61158-2. Conexões incluem bornes em caixas de junção/barreiras de campo e M12 nos instrumentos. Permite barramento com derivações, árvore (chicken foot), ponto a ponto e daisy chain. O documento cita até 32 dispositivos por segmento em área segura, até 240 na rede com no máximo 4 repetidores e 4–8 por segmento em área Ex. Terminadores ficam nas pontas do tronco.</dd></div>
+                                <div><dt>Sinais elétricos</dt><dd>Manchester II a 31,25 kb/s, com modulação de corrente de aproximadamente 15–20 mA pico a pico. O mesmo par fornece 9–32 Vcc, com consumo típico de 10–20 mA por instrumento. FISCO/FNICO podem apoiar segurança intrínseca; blindagem aterrada em um ponto evita laços de terra.</dd></div>
+                                <div><dt>Comunicação</dt><dd>Um Link Active Scheduler (LAS) controla o barramento. O tráfego cíclico agendado usa Compel Data no modelo publicador/assinante; o não agendado usa Pass Token para alarmes e configuração. Blocos AI, PID e AO permitem executar controle nos instrumentos (Control in the Field). O quadro DLPDU contém controle, endereços, dados e FCS CRC-16.</dd></div>
+                                <div><dt>Desempenho</dt><dd>A taxa é 31,25 kb/s. O alcance citado é até 1900 m por segmento em área segura (cerca de 9,5 km com 4 repetidores) e cerca de 1000 m em área Ex. É determinístico, com macrociclos de algumas centenas de milissegundos, para controle de processos no nível de Campo.</dd></div>
+                            </dl>
+                        </details>
                     </article>
                     <article class="item">
                         <div class="cabecalho-item">
-                            <svg class="icone-tecnologia" aria-hidden="true" focusable="false"><use href="ilustracoes.svg#asi"></use></svg>
+                            <img class="foto-tecnologia" src="assets/photos/asi.jpg" alt="Máquina industrial com sensores, tubulações e módulos de controle" loading="lazy" decoding="async">
                             <h3>AS-i</h3>
                         </div>
                         <p>AS-i (Actuator Sensor Interface) conecta sensores e atuadores simples ao sistema de controle por meio de um barramento de campo.</p>
                         <p>Um cabo de dois condutores pode transportar dados e alimentação. A instalação costuma usar módulos ou conexões próprios para facilitar a ligação dos dispositivos.</p>
                         <p class="dado">É indicado para sinais simples de campo; confirme a quantidade de nós e os limites da versão usada.</p>
+                        <details class="detalhes-tecnicos">
+                            <summary>Detalhes técnicos</summary>
+                            <dl>
+                                <div><dt>Cabeamento</dt><dd>Usa cabo chato amarelo de dois condutores (2 × 1,5 mm²), sem blindagem nem torção, para dados e energia; um cabo chato preto opcional leva 24 Vcc auxiliar. Conexões por perfuração do isolamento dispensam descascar o cabo; também há M12, M8 e bornes. Topologia livre (linha, estrela, árvore ou anel aberto), sem terminadores.</dd></div>
+                                <div><dt>Sinais elétricos</dt><dd>APM usa pulsos alternados de corrente (forma aproximada de seno ao quadrado), com codificação Manchester sobre alimentação de aproximadamente 30 Vcc (26,5–31,6 V). A mesma linha transporta dados e energia; um indutor na fonte desacopla o sinal. A imunidade vem da modulação/simetria, não de blindagem. Módulos podem ter IP67; AS-i Safety at Work é indicado no documento até SIL 3/PL e.</dd></div>
+                                <div><dt>Comunicação</dt><dd>O mestre faz polling cíclico, consultando um escravo por vez. A requisição tem 14 bits e a resposta 7 bits; cada escravo troca 4 bits de entrada e 4 de saída.</dd></div>
+                                <div><dt>Desempenho</dt><dd>Taxa de 167 kb/s. O segmento alcança 100 m, ou até 300 m com repetidores/extensores. O ciclo citado é 5 ms para até 31 escravos e 10 ms para até 62 com endereçamento A/B. Fica no nível de sensores e atuadores e pode conectar-se a um mestre/gateway superior.</dd></div>
+                            </dl>
+                        </details>
                     </article>
                     <article class="item">
                         <div class="cabecalho-item">
-                            <svg class="icone-tecnologia" aria-hidden="true" focusable="false"><use href="ilustracoes.svg#io-link"></use></svg>
+                            <img class="foto-tecnologia" src="assets/photos/io-link.jpg" alt="Placa eletrônica com componentes de comunicação" loading="lazy" decoding="async">
                             <h3>IO-Link</h3>
                         </div>
                         <p>IO-Link é uma comunicação digital ponto a ponto entre um mestre IO-Link e um sensor ou atuador. Não é uma rede Ethernet nem um barramento compartilhado entre vários instrumentos.</p>
                         <p>Além do valor medido, pode transmitir parâmetros, identificação do dispositivo e informações de diagnóstico. Isso facilita a substituição e a configuração de equipamentos.</p>
                         <p class="dado">O mestre faz a conexão com a rede de controle. Comprimento e tipo de cabo devem respeitar a especificação do sistema.</p>
+                        <details class="detalhes-tecnicos">
+                            <summary>Detalhes técnicos</summary>
+                            <dl>
+                                <div><dt>Cabeamento</dt><dd>Ligação ponto a ponto por cabo padrão de 3 ou 5 fios, sem blindagem, com até 20 m. Conectores comuns são M12 A-coded e M8. Cada sensor/atuador liga a uma porta do mestre, que costuma ter 4–8 portas; o mestre conecta-se ao fieldbus superior. Há também IO-Link Wireless.</dd></div>
+                                <div><dt>Sinais elétricos</dt><dd>Usa níveis de 24 Vcc (18–30 V) e UART de 11 bits no mesmo fio de chaveamento. O mestre pode fornecer cerca de 200 mA por porta classe A; classe B oferece alimentação adicional para atuadores. O modo SIO permite funcionamento como entrada/saída digital comum.</dd></div>
+                                <div><dt>Comunicação</dt><dd>Mestre-escravo com ciclos fixos (M-sequences). Dados de processo são cíclicos; ISDU transporta parâmetros acíclicos e eventos de diagnóstico. A mensagem contém controle, tipo, dados e checksum CKS de 6 bits; dados de processo podem chegar a 32 bytes.</dd></div>
+                                <div><dt>Desempenho</dt><dd>Taxas COM1: 4,8 kb/s; COM2: 38,4 kb/s; COM3: 230,4 kb/s. A ligação é limitada a 20 m. A comunicação é determinística; o ciclo pode partir de cerca de 0,4 ms em COM3 e chegar a alguns milissegundos. Está no nível de sensores e atuadores, com parâmetros e diagnóstico acessíveis ao Controle.</dd></div>
+                            </dl>
+                        </details>
                     </article>
                 </div>
             </div>
@@ -160,15 +269,25 @@
                 <div class="lista">
                     <article class="item">
                         <div class="cabecalho-item">
-                            <svg class="icone-tecnologia" aria-hidden="true" focusable="false"><use href="ilustracoes.svg#wireless-hart"></use></svg>
+                            <img class="foto-tecnologia" src="assets/photos/wireless-hart.jpg" alt="Equipamentos de comunicação instalados em uma estrutura externa" loading="lazy" decoding="async">
                             <h3>WirelessHART</h3>
                         </div>
                         <p>WirelessHART conecta instrumentos de processo por rádio, sendo útil para monitoramento e para pontos onde instalar cabos é difícil ou caro.</p>
                         <p>Os dispositivos podem encaminhar mensagens uns pelos outros, formando uma malha com caminhos alternativos. A rede inclui mecanismos de sincronização e segurança próprios do protocolo.</p>
                         <p class="dado">Cobertura e confiabilidade dependem do posicionamento dos dispositivos, das condições de rádio e do planejamento da rede.</p>
+                        <details class="detalhes-tecnicos">
+                            <summary>Detalhes técnicos</summary>
+                            <dl>
+                                <div><dt>Cabeamento</dt><dd>Usa rádio na banda ISM de 2,4 GHz, baseada no IEEE 802.15.4, com 15 canais; não há cabo de dados. A antena pode ser integrada ou externa. A topologia costuma ser malha autorganizável com gateway e Network Manager; também pode operar em estrela.</dd></div>
+                                <div><dt>Sinais elétricos</dt><dd>O-QPSK com espalhamento DSSS, taxa de rádio de 250 kb/s e potência máxima indicada de cerca de +10 dBm. Dispositivos usam bateria de lítio (vida estimada de 5–10 anos) ou energy harvesting; o gateway usa alimentação de rede. Salto de canais, lista de canais bloqueados, AES-128, autenticação e opções com certificação intrínseca reforçam a proteção.</dd></div>
+                                <div><dt>Comunicação</dt><dd>TDMA sincronizado organiza a comunicação em slots de 10 ms com salto de canal (TSMP). O Network Manager define horários e rotas. O quadro deriva do 802.15.4 e inclui cabeçalhos, comando HART, MIC de 4 bytes e CRC-16.</dd></div>
+                                <div><dt>Desempenho</dt><dd>O alcance citado é cerca de 100 m entre nós em ambiente industrial, maior com visada; a malha amplia a cobertura. Atualizações podem variar de 1 s a 60 min. Os slots são determinísticos, mas múltiplos saltos podem gerar latência de segundos. É adequado a monitoramento e retrofit, não a controle rápido; o gateway liga a rede à Supervisão.</dd></div>
+                            </dl>
+                        </details>
                     </article>
                 </div>
             </div>
+            <p class="credito-fotos">As fotos mostram equipamentos relacionados aos temas; os protocolos são regras de comunicação e não têm uma aparência visual própria. Fotografias ilustrativas: <a href="https://www.pexels.com/license/">Pexels</a>.</p>
         </section>
 
         <section class="secao">

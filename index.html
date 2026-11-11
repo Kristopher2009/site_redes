@@ -136,8 +136,46 @@
                     </div>
                 </article>
             </div>
-            <p class="nota-piramide">Os exemplos são comuns, mas não exclusivos de cada nível. A tecnologia adequada depende dos requisitos e da arquitetura do projeto.</p>
+            <p class="nota-piramide"><strong>Comparação com o PDF:</strong> o documento agrupa a automação em quatro níveis: Campo, Controle, Supervisão (incluindo SCADA, IHM e MES) e Integração (IIoT, nuvem e ERP). Esta página separa a operação da fábrica (MES) e a gestão empresarial (ERP) em dois níveis, totalizando cinco. Assim, os níveis 4 e 5 detalham partes que o PDF reúne no nível de Integração. Os exemplos não são exclusivos; a arquitetura real varia conforme o projeto.</p>
             <a class="link-piramide" href="industriais.html">Conheça as redes industriais →</a>
+        </section>
+
+        <section class="secao exemplo-automacao">
+            <p class="rotulo">EXEMPLO PRÁTICO</p>
+            <h2>Como a fábrica controla a temperatura?</h2>
+            <p class="introducao-exemplo">Imagine um equipamento que precisa manter uma temperatura adequada. Veja como a informação pode passar pelos níveis da automação:</p>
+            <div class="fluxo-automacao" aria-label="Etapas do controle de temperatura na fábrica">
+                <article class="etapa-automacao">
+                    <span class="numero-etapa">01</span>
+                    <h3>Campo · sensor</h3>
+                    <p>Mede a temperatura e envia o valor ao controlador.</p>
+                </article>
+                <span class="seta-fluxo" aria-hidden="true">→</span>
+                <article class="etapa-automacao">
+                    <span class="numero-etapa">02</span>
+                    <h3>Controle · CLP</h3>
+                    <p>Compara a medição com o valor desejado e comanda o aquecedor, se necessário.</p>
+                </article>
+                <span class="seta-fluxo" aria-hidden="true">→</span>
+                <article class="etapa-automacao">
+                    <span class="numero-etapa">03</span>
+                    <h3>Supervisão</h3>
+                    <p>Uma tela mostra a temperatura e os alarmes para o operador.</p>
+                </article>
+                <span class="seta-fluxo" aria-hidden="true">→</span>
+                <article class="etapa-automacao">
+                    <span class="numero-etapa">04</span>
+                    <h3>Operação · MES</h3>
+                    <p>O sistema acompanha dados da produção, como lotes e qualidade.</p>
+                </article>
+                <span class="seta-fluxo" aria-hidden="true">→</span>
+                <article class="etapa-automacao">
+                    <span class="numero-etapa">05</span>
+                    <h3>Gestão · ERP</h3>
+                    <p>Informações consolidadas ajudam a empresa a planejar.</p>
+                </article>
+            </div>
+            <p class="nota-exemplo">Este é um exemplo simplificado. Na prática, a integração e o caminho dos dados variam conforme a fábrica; nem toda medição chega diretamente ao ERP.</p>
         </section>
     </main>
 

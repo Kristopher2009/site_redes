@@ -27,35 +27,64 @@
         <section class="secao">
             <p class="rotulo">TRÊS TECNOLOGIAS</p>
             <h2>Meios de conexão</h2>
+            <p class="apoio-tecnico">As explicações simples ficam visíveis. Abra “Detalhes técnicos” para consultar os dados do documento; valores variam conforme o padrão, o equipamento e a instalação.</p>
             <div class="lista">
                 <article class="item">
                     <div class="cabecalho-item">
-                        <svg class="icone-tecnologia" aria-hidden="true" focusable="false"><use href="ilustracoes.svg#corporate-ethernet"></use></svg>
+                        <img class="foto-tecnologia" src="assets/photos/ethernet.jpg" alt="Cabos Ethernet com conectores de rede" loading="lazy" decoding="async">
                         <h3>Ethernet</h3>
                     </div>
                     <p>Ethernet é a tecnologia com fio mais comum em redes locais. Computadores, impressoras e pontos de acesso podem ligar-se a um switch, que encaminha os dados para o dispositivo correto.</p>
                     <p>O switch aprende os endereços dos equipamentos e usa essa informação para encaminhar quadros dentro da rede local. Roteadores conectam redes diferentes, como a rede do escritório e a internet.</p>
                     <p class="dado">Há padrões de 10 Mb/s, 100 Mb/s, 1 Gb/s e velocidades maiores. A velocidade real depende das portas, do cabo e dos equipamentos nas duas pontas.</p>
+                    <details class="detalhes-tecnicos">
+                        <summary>Detalhes técnicos</summary>
+                        <dl>
+                            <div><dt>Cabeamento</dt><dd>Par trançado: Cat5e (até 1 Gb/s em 100 m), Cat6 (10 Gb/s até 55 m), Cat6A (10 Gb/s em 100 m) e Cat8 (25/40 Gb/s até 30 m). Também pode usar fibra; coaxial (10BASE5/10BASE2) aparece em padrões legados. Conectores: RJ45, SFP/SFP+, M12 D-coded (100 Mb/s), M12 X-coded (10 Gb/s) e RJ45 industrial push-pull. Topologias atuais incluem estrela e árvore; anéis podem usar RSTP ou MRP; barramento é legado coaxial.</dd></div>
+                            <div><dt>Sinais elétricos</dt><dd>10BASE-T usa Manchester; 100BASE-TX, 4B5B e MLT-3; 1000BASE-T, PAM-5; e 10GBASE-T, PAM-16. O sinal é diferencial e balanceado, com transformadores de isolamento citados em cerca de 1500 Vrms. PoE: 802.3af (15,4 W), 802.3at (30 W) e 802.3bt (aproximadamente 60–90 W). Torção, blindagem F/UTP ou S/FTP e aterramento correto ajudam contra EMI; fibra elimina esse tipo de interferência.</dd></div>
+                            <div><dt>Comunicação</dt><dd>CSMA/CD com detecção e backoff exponencial é associado a meios compartilhados half-duplex; em switches full-duplex modernos não há colisões. O quadro inclui preâmbulo (7 bytes), SFD, MAC de destino/origem, EtherType/Length, dados (46–1500 bytes) e FCS CRC-32. VLAN 802.1Q acrescenta 4 bytes.</dd></div>
+                            <div><dt>Desempenho</dt><dd>Há taxas de 10 Mb/s até 400 Gb/s. O limite usual de um segmento de cobre é 100 m (90 m de cabeamento permanente e até 10 m de cordões). Ethernet básica não garante tempo determinístico; QoS e TSN (IEEE 802.1) podem melhorar o tratamento de tráfego sensível ao tempo. No documento, aparece nos níveis de Controle, Supervisão e Integração.</dd></div>
+                        </dl>
+                    </details>
                 </article>
                 <article class="item">
                     <div class="cabecalho-item">
-                        <svg class="icone-tecnologia" aria-hidden="true" focusable="false"><use href="ilustracoes.svg#corporate-wifi"></use></svg>
+                        <img class="foto-tecnologia" src="assets/photos/wifi.jpg" alt="Roteador Wi-Fi com antenas" loading="lazy" decoding="async">
                         <h3>Wi-Fi</h3>
                     </div>
                     <p>Wi-Fi é uma tecnologia de rede local sem fio. Um ponto de acesso transmite e recebe sinais de rádio para conectar celulares, notebooks e outros dispositivos à rede.</p>
                     <p>O sinal é compartilhado entre os equipamentos próximos. Paredes, distância, outros transmissores e a quantidade de dispositivos podem afetar a qualidade da conexão.</p>
                     <p class="dado">Os padrões Wi-Fi pertencem à família IEEE 802.11. Posicionar bem os pontos de acesso e proteger a rede com configurações atuais são cuidados importantes.</p>
+                    <details class="detalhes-tecnicos">
+                        <summary>Detalhes técnicos</summary>
+                        <dl>
+                            <div><dt>Cabeamento</dt><dd>O enlace com os clientes usa rádio em 2,4, 5 ou 6 GHz (Wi-Fi 6E/7); o 802.11ah também prevê sub-1 GHz. O ponto de acesso liga-se à rede cabeada, geralmente por RJ45 e pode receber PoE. Há redes de infraestrutura (BSS/ESS), ad hoc, Wi-Fi Direct e malha 802.11s; antenas podem usar SMA/RP-SMA ou N-type.</dd></div>
+                            <div><dt>Sinais elétricos</dt><dd>As técnicas incluem DSSS/CCK, OFDM e OFDMA, com MIMO/MU-MIMO. As modulações vão de BPSK até 1024-QAM no Wi-Fi 6 e 4096-QAM no Wi-Fi 7; canais podem ter de 20 a 320 MHz. O ponto de acesso costuma usar PoE; clientes usam bateria ou fonte própria. WPA2/WPA3 protegem a comunicação, que também sofre com interferência e obstáculos; áreas classificadas exigem equipamentos certificados.</dd></div>
+                            <div><dt>Comunicação</dt><dd>CSMA/CA escuta o canal, aguarda um intervalo aleatório e usa confirmações ACK; RTS/CTS é opcional. EDCA/HCF oferece QoS; no 802.11ax, OFDMA permite escalonamento pelo ponto de acesso. O quadro inclui controle, duração, até quatro endereços MAC, sequência, QoS, dados (até 2304 bytes, ou mais com agregação A-MSDU/A-MPDU) e FCS CRC-32.</dd></div>
+                            <div><dt>Desempenho</dt><dd>Taxas teóricas citadas: 11 Mb/s (802.11b), 54 Mb/s (a/g), 600 Mb/s (n), 6,9 Gb/s (ac), 9,6 Gb/s (ax) e cerca de 46 Gb/s (be). O alcance típico é de 30 a 100 m em ambientes internos e pode chegar a centenas de metros ao ar livre com visada. Contenção e interferência tornam o Wi-Fi não determinístico; é indicado para Supervisão/Integração não críticas, como tablets, IHMs móveis, coletores, AGVs e IIoT.</dd></div>
+                        </dl>
+                    </details>
                 </article>
                 <article class="item">
                     <div class="cabecalho-item">
-                        <svg class="icone-tecnologia" aria-hidden="true" focusable="false"><use href="ilustracoes.svg#corporate-fiber"></use></svg>
+                        <img class="foto-tecnologia" src="assets/photos/fiber.jpg" alt="Cabos de fibra óptica conectados a um painel" loading="lazy" decoding="async">
                         <h3>Fibra óptica</h3>
                     </div>
                     <p>A fibra óptica transporta dados por pulsos de luz em filamentos de vidro ou plástico. É usada em enlaces de alta capacidade, ligações entre prédios e conexões de longa distância.</p>
                     <p>Fibra multimodo costuma ser usada em percursos mais curtos, como dentro de edifícios ou centros de dados. Fibra monomodo atende a enlaces mais longos; a aplicação depende dos transceptores e do projeto.</p>
                     <p class="dado">Não conduz eletricidade e não sofre interferência eletromagnética. Distância e capacidade dependem do tipo de fibra, dos módulos ópticos e das emendas.</p>
+                    <details class="detalhes-tecnicos">
+                        <summary>Detalhes técnicos</summary>
+                        <dl>
+                            <div><dt>Cabeamento</dt><dd>Multimodo inclui OM1 (62,5/125 µm) e OM2–OM5 (50/125 µm, normalmente 850 nm); monomodo OS1/OS2 usa núcleo de cerca de 9 µm, normalmente 1310 ou 1550 nm. Conectores: LC, SC, ST, FC, MPO/MTP e, em versões industriais, SC-RJ/M12 óptico. Pode formar enlaces ponto a ponto, estrela, anel ou árvore PON.</dd></div>
+                            <div><dt>Sinais elétricos</dt><dd>O transmissor converte dados em pulsos de luz: LED/VCSEL é comum em multimodo e laser DFB em monomodo. Podem ser usados NRZ ou PAM-4 e codificações 8b/10b ou 64b/66b. A fibra não transporta energia elétrica, é imune a EMI/RFI e oferece isolamento galvânico; não gera faísca, observados os limites de potência óptica aplicáveis.</dd></div>
+                            <div><dt>Comunicação</dt><dd>A fibra é o meio físico; o protocolo define o acesso e o quadro. Ethernet óptica costuma ser full-duplex ponto a ponto, por duas fibras ou WDM em uma. Em redes PON, usa-se TDM no sentido descendente e TDMA no ascendente; o quadro é o do protocolo transportado, como Ethernet 802.3.</dd></div>
+                            <div><dt>Desempenho</dt><dd>O documento cita taxas de 100 Mb/s a 400 Gb/s ou superiores. Exemplos: 1000BASE-SX até 550 m em multimodo; 10GBASE-SR até 300 m (OM3) ou 400 m (OM4); 1000BASE-LX e 10GBASE-LR até 10 km; ER até 40 km e ZR até 80 km em monomodo. A propagação é cerca de 5 µs/km; o determinismo depende do protocolo e dos equipamentos.</dd></div>
+                        </dl>
+                    </details>
                 </article>
             </div>
+            <p class="credito-fotos">Fotografias ilustrativas: <a href="https://www.pexels.com/license/">Pexels</a>.</p>
         </section>
 
         <section class="secao">
